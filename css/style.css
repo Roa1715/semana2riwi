@@ -1,0 +1,267 @@
+/* ==========================================================================
+   1. VARIABLES (MiniReto 9 y Paleta del Cliente)
+   ========================================================================== */
+:root {
+    --verde-ruta: #1E7A4F;
+    /* Botones y enlaces[cite: 1] */
+    --naranja-pedal: #F39A2B;
+    /* Destacados y botones secundarios[cite: 1] */
+    --azul-noche: #14213D;
+    /* Títulos y encabezado[cite: 1] */
+    --crema: #FAF6EF;
+    /* Fondo general[cite: 1] */
+    --gris-asfalto: #5B6470;
+    /* Texto secundario[cite: 1] */
+
+    --fuente-titulos: 'Montserrat', sans-serif;
+    --fuente-texto: 'Open Sans', sans-serif;
+
+    --espacio-sm: 0.5rem;
+    --espacio-md: 1rem;
+    --espacio-lg: 2rem;
+}
+
+/* ==========================================================================
+   2. REQUISITO GENERAL: BOX-SIZING
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   3. ESTILOS GLOBALES Y CONTENEDOR PRINCIPAL
+   ========================================================================== */
+body {
+    background-color: var(--crema);
+    color: var(--gris-asfalto);
+    font-family: var(--fuente-texto);
+    margin: 0;
+    padding: 0;
+}
+
+/* Limitar el ancho del contenido principal con rem y centrarlo */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--espacio-lg);
+}
+
+/* Portada de inicio con altura mínima relativa al alto de la ventana */
+header.encabezado {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--azul-noche);
+    color: #ffffff;
+    padding: var(--espacio-lg);
+    text-align: center;
+}
+
+header.encabezado h1,
+header.encabezado h2 {
+    color: #ffffff;
+    text-align: left;
+    margin: bottom 1.5rem;
+}
+
+/* ==========================================================================
+   4. MENÚ DE NAVEGACIÓN EN FILA
+   ========================================================================== */
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Eliminamos márgenes anteriores */
+    display: flex;
+    /* Contenedor flexible */
+    flex-wrap: wrap;
+    /* Pasan a otra línea si no caben */
+    gap: var(--espacio-md);
+    /* Separación uniforme entre enlaces */
+    align-items: center;
+}
+
+#menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: var(--espacio-sm) var(--espacio-md);
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#menu a:hover {
+    background-color: var(--verde-ruta);
+    color: #ffffff;
+}
+
+#menu a:focus {
+    outline: 3px solid var(--naranja-pedal);
+    outline-offset: 2px;
+    background-color: rgba(243, 154, 43, 0.2);
+}
+
+#menu a.activo {
+    font-weight: 700;
+    border-bottom: 3px solid var(--naranja-pedal);
+    color: var(--naranja-pedal);
+}
+
+/* ==========================================================================
+   5. TARJETAS DE SERVICIOS (INDEX)
+   ========================================================================== */
+section article {
+    background-color: #ffffff;
+    border: 1px solid rgba(91, 100, 112, 0.2);
+    border-radius: 8px;
+    padding: var(--espacio-lg);
+    margin-bottom: var(--espacio-lg);
+    /* Separación entre tarjetas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Imagen de la tarjeta ocupando todo el ancho disponible */
+section article img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: var(--espacio-sm);
+}
+
+/* ==========================================================================
+   6. MEJORA DE TABLAS (TARIFAS Y RUTAS)
+   ========================================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--espacio-lg);
+    background-color: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: var(--espacio-md);
+    border: 1px solid rgba(91, 100, 112, 0.2);
+    text-align: left;
+}
+
+th {
+    background-color: var(--verde-ruta);
+    /* Fondo de marca con contraste */
+    color: #ffffff;
+    font-family: var(--fuente-titulos);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(250, 246, 239, 0.5);
+}
+
+/* ==========================================================================
+   7. FORMULARIO ORGANIZADO (RESERVAS)
+   ========================================================================== */
+fieldset {
+    border: 1px solid rgba(91, 100, 112, 0.3);
+    border-radius: 6px;
+    padding: var(--espacio-lg);
+    margin-bottom: var(--espacio-lg);
+    background-color: #ffffff;
+}
+
+legend {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    color: var(--azul-noche);
+    padding: 0 var(--espacio-sm);
+}
+
+/* Cada etiqueta sobre su campo y campos a todo el ancho disponible */
+fieldset div {
+    margin-bottom: var(--espacio-md);
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: var(--espacio-sm);
+    font-weight: 600;
+    color: var(--azul-noche);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: var(--espacio-sm);
+    border: 1px solid var(--gris-asfalto);
+    border-radius: 4px;
+
+}
+
+.politicas input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+/* Botón con relleno generoso */
+button[type="submit"],
+.btn-cta {
+    display: inline-block;
+    padding: var(--espacio-md) var(--espacio-lg);
+    background-color: var(--naranja-pedal);
+    color: var(--azul-noche);
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid var(--naranja-pedal);
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+button[type="submit"]:hover,
+.btn-cta:hover {
+    background-color: #d88320;
+    color: #ffffff;
+}
+
+/* Indicadores de foco accesibles */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: 3px solid var(--verde-ruta);
+    outline-offset: 2px;
+}
+
+footer,
+.pie {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Separados de forma uniforme */
+    align-items: flex-start;
+    /* Alineados por arriba */
+    background-color: var(--azul-noche);
+    color: #ffffff;
+    padding: var(--espacio-lg);
+    gap: var(--espacio-lg);
+}
+
+.pie>div {
+    flex: 1;
+    min-width: 220px;
+    /* Asegura que no se encojan demasiado en pantallas medianas */
+}
