@@ -121,3 +121,14 @@ Encabezado: Gracias a la propiedad flex-wrap: wrap, al reducir la pantalla los e
 Pie de página: Los tres bloques (marca, contacto y horario) distribuidos en fila con flex: 1 y min-width se adaptan dinámicamente. En pantallas grandes se muestran uno al lado del otro, y al estrechar la ventana, bajan de manera escalonada en columnas verticales manteniendo su alineación superior
 
 
+Portada	uso Grid con Dos columnas con proporción definida (1fr 1fr); align-items centra el texto en vertical.
+
+Galería “Nuestras rutas”	Grid	Tres columnas iguales fijas con repeat(3, 1fr), sin importar el contenido.
+
+Reservas	Grid	Proporción 2:1 exacta (2fr 1fr), definida desde el contenedor.
+
+Fila del formulario	Flexbox	Una sola dimensión; flex: 1 1 12rem y wrap la apilan sola en pantallas angostas.
+
+Encabezado	Flexbox	Una fila con título a un lado y menú al otro (space-between). El menú también es una fila flex con gap y wrap.
+
+Pie	Flexbox	Una fila de bloques con space-between y wrap, repartidos según su contenido.

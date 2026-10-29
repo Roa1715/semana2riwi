@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -26,6 +26,14 @@
         </nav>
     </header>
     <main>
+        <section class="portada">
+            <div class="portada__texto">
+                <h2>Recorre Medellín sobre ruedas</h2>
+                <p>Alquila la bicicleta ideal y explora la ciudad a tu ritmo.</p>
+                <a href="paginas/reservas.html#reserva" class="btn-cta">Reservar bicicleta ahora</a>
+            </div>
+            <img src="img/portada.jpeg" alt="Fotografía del local y portada de Rueda Libre">
+        </section>
         <section>
             <h2>¿Quiénes somos?</h2>
             <p>Bienvenido a Rueda Libre.</p>
@@ -37,6 +45,68 @@
                 <a href="#encuentranos">Visita nuestra ubicación en Medellín</a>.
             </p>
         </section>
+        <section class="flota" aria-labelledby="flota-titulo">
+            <h2 id="flota-titulo">Nuestra flota</h2>
+
+            <div class="flota__grid">
+                <article>
+                    <img src="img/urbanaclass.jpeg" alt="Bicicleta Urbana Clásica">
+                    <h3>Urbana Clásica</h3>
+                    <p>Cómoda y liviana para las ciclorrutas.</p>
+                    <p class="bici__precio">$10.000 por hora</p>
+                    <a href="paginas/reservas.html#reserva" class="btn-cta">Reservar</a>
+                </article>
+
+                <article>
+                    <img src="img/urbanapleg.jpeg" alt="Bicicleta Urbana Plegable">
+                    <h3>Urbana Plegable</h3>
+                    <p>Se dobla en segundos; ideal para combinar con el metro.</p>
+                    <p class="bici__precio">$12.000 por hora</p>
+                    <a href="paginas/reservas.html#reserva" class="btn-cta">Reservar</a>
+                </article>
+
+                <article>
+                    <img src="img/monta.jpeg" alt="Bicicleta Montaña Trail">
+                    <h3>Montaña Trail</h3>
+                    <p>Suspensión delantera y 21 cambios para las subidas.</p>
+                    <p class="bici__precio">$15.000 por hora</p>
+                    <a href="paginas/reservas.html#reserva" class="btn-cta">Reservar</a>
+                </article>
+
+                <article>
+                    <img src="img/gravel.jpeg" alt="Bicicleta Gravel Aventura">
+                    <h3>Gravel Aventura</h3>
+                    <p>Para rutas mixtas de asfalto y destapado.</p>
+                    <p class="bici__precio">$18.000 por hora</p>
+                    <a href="paginas/reservas.html#reserva" class="btn-cta">Reservar</a>
+                </article>
+
+                <article>
+                    <img src="img/electrica.jpeg" alt="Bicicleta Eléctrica Urbana">
+                    <h3>Eléctrica Urbana</h3>
+                    <p>Asistencia eléctrica con 45 km de autonomía.</p>
+                    <p class="bici__precio">$25.000 por hora</p>
+                    <a href="paginas/reservas.html#reserva" class="btn-cta">Reservar</a>
+                </article>
+
+                <article>
+                    <img src="img/infantil.jpeg" alt="Bicicleta infantil">
+                    <h3>Infantil</h3>
+                    <p>Para niños de 6 a 10 años.</p>
+                    <p class="bici__precio">$8.000 por hora</p>
+                    <a href="paginas/reservas.html#reserva" class="btn-cta">Reservar</a>
+                </article>
+                <article>
+                    <img src="img/tandem.jpeg" alt="Bicicleta tándem">
+                    <h3>Tándem</h3>
+                    <p>Para dos personas; perfecta para pasear en pareja.</p>
+                    <p class="bici__precio">$20.000 por hora</p>
+                    <a href="paginas/reservas.html#reserva" class="btn-cta">Reservar</a>
+                </article>
+            </div>
+        </section>
+
+
 
         <section>
             <h2>Nuestros Servicios</h2>
@@ -80,14 +150,27 @@
             </ol>
         </section>
 
-        <section>
-            <h2>Galería</h2>
-            <div>
-                <img src="img/portada.jpeg" alt="Fotografía del local y portada de Rueda Libre" width="250">
-                <img src="img/images2.jpeg" alt="Ciclista recorriendo una ruta urbana en Medellín" width="300">
-                <img src="img/bicicelta.jpeg" alt="Bicicleta de alquiler equipada" width="400">
+        <section class="rutas">
+            <h2>Nuestras rutas</h2>
+            <div class="rutas__grid">
+                <article>
+                    <img src="img/rios_y_parques.jpeg" alt="Ruta Ríos y Parques">
+                    <h3>Ríos y Parques</h3>
+                    <p>Nivel: Fácil</p>
+                </article>
+                <article>
+                    <img src="img/sabores-de-barrio.jpeg" alt="Ruta Sabores de Barrio">
+                    <h3>Sabores de Barrio</h3>
+                    <p>Nivel: Medio</p>
+                </article>
+                <article>
+                    <img src="img/recto-las-palmas.jpeg" alt="Ruta Recto Las Palmas">
+                    <h3>Recto Las Palmas</h3>
+                    <p>Nivel: Difícil</p>
+                </article>
             </div>
-
+        </section>
+        <section>
             <div>
                 <a href="https://maps.app.goo.gl/bWnA2xjAoHqtGtQr9" target="_blank" rel="noopener noreferrer"
                     class="btn-cta">Ver
