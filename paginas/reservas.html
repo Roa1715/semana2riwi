@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva tu bicicleta | Rueda Libre</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-light text-dark">
+
+    <!-- Navbar de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-white" href="../index.html">Rueda Libre 🚲</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Navegación de palanca">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="tarifas.html#info">Tarifas y rutas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold text-white" aria-current="page"
+                            href="reservas.html#reserva">Reservas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+
+        <!-- ALERTA INFORMATIVA DESCARTABLE -->
+        <div class="alert alert-info alert-dismissible fade show shadow-sm mb-4" role="alert">
+            <strong>📌 Recordatorio importante:</strong> Recuerda presentar tu documento de identidad original al
+            momento de recoger la bicicleta.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar alerta"></button>
+        </div>
+
+        <div class="row g-4" id="reserva">
+            <!-- Columna principal (Formulario) -->
+            <div class="col-12 col-md-8">
+                <section class="bg-white p-4 rounded-3 border shadow-sm">
+                    <h2 class="h4 fw-bold mb-4 text-primary">Formulario de reserva</h2>
+
+                    <!-- FORMULARIO CON VALIDACIÓN NATIVA Y VISUAL DE BOOTSTRAP (needs-validation novalidate) -->
+                    <form class="needs-validation" novalidate action="" method="post">
+
+                        <!-- Fieldset 1: Tus datos -->
+                        <fieldset class="border rounded-3 p-3 mb-4">
+                            <legend class="float-none w-auto px-2 fs-6 fw-bold text-primary m-0">Tus datos</legend>
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <label for="nombre" class="form-label fw-semibold small">Nombre completo</label>
+                                    <input type="text" class="form-control" name="nombre_completo" id="nombre"
+                                        placeholder="Juan David" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, ingresa tu nombre completo para la reserva.
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="documento" class="form-label fw-semibold small">Documento de
+                                        identidad</label>
+                                    <input type="text" class="form-control" name="documento_identidad" id="documento"
+                                        placeholder="1040573272" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, ingresa tu número de documento de identidad.
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="correo" class="form-label fw-semibold small">Correo electrónico</label>
+                                    <input type="email" class="form-control" name="correo_electronico" id="correo"
+                                        placeholder="alejo@gmail.com" required>
+                                    <div class="invalid-feedback">
+                                        Ingresa un correo electrónico válido (ejemplo: usuario@dominio.com).
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="celular" class="form-label fw-semibold small">Celular</label>
+                                    <input type="tel" class="form-control" name="numero_celular" id="celular"
+                                        placeholder="3042785947" required>
+                                    <div class="invalid-feedback">
+                                        Ingresa un número de celular de contacto válido.
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Fieldset 2: Tu alquiler -->
+                        <fieldset class="border rounded-3 p-3 mb-4">
+                            <legend class="float-none w-auto px-2 fs-6 fw-bold text-primary m-0">Tu alquiler</legend>
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <label for="tipo_bicicleta" class="form-label fw-semibold small">Tipo de
+                                        bicicleta</label>
+                                    <select class="form-select" name="tipo_bicicleta" id="tipo_bicicleta" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="urbana">Urbana</option>
+                                        <option value="montaña">Montaña</option>
+                                        <option value="electrica">Eléctrica</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Selecciona un tipo de bicicleta de la lista.
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="plan" class="form-label fw-semibold small">Plan o recorrido
+                                        guiado</label>
+                                    <select class="form-select" name="plan" id="plan" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="rios_y_parques">Ríos y Parques</option>
+                                        <option value="sabores_de_barrio">Sabores de Barrio</option>
+                                        <option value="recto_las_palmas">Recto las Palmas</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Selecciona un plan o ruta de alquiler.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="cantidad_de_bici" class="form-label fw-semibold small">Cantidad de
+                                        bicicletas</label>
+                                    <input type="number" class="form-control" name="cantidad_de_bici"
+                                        id="cantidad_de_bici" min="1" max="6" value="1" required>
+                                    <div class="invalid-feedback">
+                                        Debes reservar entre 1 y 6 bicicletas.
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Fieldset 3: Confirmación y Políticas -->
+                        <fieldset class="border rounded-3 p-3 mb-4">
+                            <legend class="float-none w-auto px-2 fs-6 fw-bold text-primary m-0">Confirmación</legend>
+
+                            <div class="row g-3 mb-3">
+                                <div class="col-12 col-sm-6">
+                                    <label for="fecha_de_alquiler" class="form-label fw-semibold small">Fecha de
+                                        alquiler</label>
+                                    <input type="date" class="form-control" name="fecha_de_alquiler"
+                                        id="fecha_de_alquiler" required>
+                                    <div class="invalid-feedback">
+                                        Selecciona la fecha programada para tu reserva.
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="hora_de_entrega" class="form-label fw-semibold small">Hora de
+                                        entrega</label>
+                                    <input type="time" class="form-control" name="hora_de_entrega" id="hora_de_entrega"
+                                        required>
+                                    <div class="invalid-feedback">
+                                        Especifica la hora en que recogerás la bicicleta.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CHECKBOX DE ACEPTACIÓN Y BOTÓN DE MODAL -->
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="politicas" name="politicas"
+                                    required>
+                                <label class="form-check-label small" for="politicas">
+                                    Acepto las
+                                    <button type="button"
+                                        class="btn btn-link p-0 align-baseline fw-semibold text-primary text-decoration-underline"
+                                        data-bs-toggle="modal" data-bs-target="#modalPoliticas">
+                                        Políticas de alquiler
+                                    </button>
+                                    <strong class="text-danger">(Obligatorio)</strong>
+                                </label>
+                                <div class="invalid-feedback">
+                                    Debes leer y aceptar las políticas de alquiler antes de enviar.
+                                </div>
+                            </div>
+
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg fw-bold w-100 shadow-sm">Enviar
+                                    información de reserva</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </section>
+            </div>
+
+            <!-- Columna lateral -->
+            <div class="col-12 col-md-4">
+                <aside class="bg-white p-4 rounded-3 border shadow-sm mb-4">
+                    <h2 class="h4 fw-bold mb-3 text-dark">Horario de atención</h2>
+                    <p class="small text-secondary mb-2"><strong>Lunes a viernes:</strong> 7:00 a. m. a 7:00 p. m.</p>
+                    <p class="small text-secondary mb-3"><strong>Sábados, domingos y festivos:</strong> 6:00 a. m. a
+                        2:00 p. m.</p>
+                    <a href="mailto:reserva@gmail.com"
+                        class="btn btn-outline-primary btn-sm w-100 fw-semibold">Contactar soporte por correo</a>
+                </aside>
+
+                <section class="bg-primary bg-opacity-10 p-4 rounded-3 border border-primary border-opacity-25">
+                    <p class="m-0 text-primary fw-semibold small text-center">Somos una empresa muy confiable y puntual
+                        a la hora de los encargos.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- MODAL DE POLÍTICAS DE ALQUILER -->
+    <div class="modal fade" id="modalPoliticas" tabindex="-1" aria-labelledby="modalPoliticasTitulo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h3 class="modal-title h5 fw-bold text-white m-0" id="modalPoliticasTitulo">Políticas de Alquiler
+                    </h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ol class="mb-0 ps-3">
+                        <li class="mb-2">Presenta tu documento de identidad original al recoger la bicicleta.</li>
+                        <li class="mb-2">Revisa la bicicleta con el asesor antes de salir.</li>
+                        <li class="mb-2">Cada 15 minutos de retraso en la devolución tienen un recargo de $5.000.</li>
+                        <li class="mb-2">Los daños por mal uso se cobran según el costo de la reparación.</li>
+                        <li class="m-0">Los menores de edad deben estar acompañados por un adulto responsable.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary fw-semibold" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página (Estilo One Piece) -->
+    <footer class="bg-dark text-white pt-5 pb-4 border-top border-warning border-4 mt-5">
+        <div class="container text-center text-md-start">
+            <p class="m-0 small text-white-50">© 2026 Rueda Libre x One Piece Fan Project. Todos los derechos
+                reservados.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT OFICIAL DE BOOTSTRAP 5 PARA VALIDACIÓN DE FORMULARIOS -->
+    <script>
+        (() => {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+
+    <!-- Bundle de JavaScript de Bootstrap (cargado al final) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s98+8i5AB4v1z1C5v5f5+5+5..." crossorigin="anonymous"></script>
+</body>
+
+</html>

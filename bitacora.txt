@@ -1,0 +1,203 @@
+URL: http://127.0.0.1:5500/dia1/malamia.html
+Codigo de estado: 304
+Protocolo: HTTP/1.1
+Host: 127.0.0.1:5500
+Puerto:5500
+Ruta:dia1/malamia.html
+Metodo:Get
+
+Cannot GET /dia1/malamia.html
+
+Html:Funcionara como el esqueleto que definira la jerarquia de  titulos, subtitulos,formularios y ubicacion de imagenes y/o videos
+Css:Funcionara como lo que va a poner diseño  al esqueleto, osea, pondra caligrafia formal, color que respresente a la marca o que la haga ver mejor esterilizada.
+Javascript:Es como el cerebro, es el que se encarga de interactuar con el usuario al presionar un boton, o al iniciar sesion le de la bienvenida personalizada con su nombre de usuario
+
+Archivo de origen:dia1
+destino:
+ruta:
+
+index.html:
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
+</head>
+
+<body>
+    <nav>
+        <li><a href="index.html">inicio</a></li>
+        <li><a href="paginas/tarifas.html#info">Tarifas y rutas</a></li>
+        <li><a href="paginas/reservas.html#reserva">reservas</a></li>
+    </nav>
+
+    header  
+    <h1>Rueda Libre</h1>
+    <p>bienvenido a Rueda Libre</p>
+    <h2>Quienes somos?</h2>
+    <p>En Rueda Libre nos especializamos en ofrecer <strong>soluciones</strong> de alquiler prácticas y accesibles,
+        brindando a nuestros clientes una experiencia cómoda, <strong>confiable y sencilla</strong>. Nuestro objetivo es
+        facilitar el acceso a lo que necesitas, con un servicio pensado para adaptarse a tus necesidades.<a
+            href=" #encuentranos">encuentranos</a>. </p>
+    header
+
+    </p>
+
+    main
+    <h2>Nuestros Servicios</h2>
+    <p>tenemos servicios como:</p>
+    <h3>Alquiler de productos</h3>
+    <p>Ofrecemos diferentes opciones de alquiler para que encuentres lo que necesitas de manera fácil y rápida.
+    </p>
+    <a href="paginas/reservas.html#reserva">reservar ahora</a>
+    <a href="paginas/tarifas.html#tarifa_de_alquiler">Ver tarifas</a>
+    <h3>Atención personalizada</h3>
+    <p>Te acompañamos durante el proceso para resolver tus dudas y ayudarte a elegir la mejor opción.</p>
+    <h3>Flexibilidad y comodidad</h3>
+    <p>Buscamos que alquilar sea un proceso <strong>sencillo </strong>, con alternativas que se adapten a tus
+        necesidades y disponibilidad.</p>
+    <h3>Asesoría y acompañamiento</h3>
+    <p>Te brindamos información clara sobre nuestros productos, condiciones de alquiler y tarifas para que tomes
+        la
+        mejor decisión.</p>
+
+    <h2>¿Como alquilar?</h2>
+    <div>
+        <ol>escoger lo que te gusto</ol>
+        <ol>llenar formulario</ol>
+        <ol>verificar direccion</ol>
+        <ol>listo esperar para disfrutar</ol>
+    </div>
+
+    <div>
+        <img src="img/portada.jpeg" alt="portada" width="250px">
+        <img src="img/images2.jpeg" alt="ruta" width="300px">
+        <img src="img/bicicelta.jpeg" alt="una bicicleta" width="400px">
+    </div>
+
+    <div>
+        <a href="https://maps.app.goo.gl/bWnA2xjAoHqtGtQr9">RUTA AQUI</a>
+
+        <a href="hola@ruedalibre.example">correo</a>
+    </div>
+    <h2>Encuentranos</h2>
+    <p id="encuentranos">
+        Tienes dudas? ven y visitanos
+    </p>
+    main
+
+
+</body>
+<footer>
+    <p><strong>Negocio:</strong> Rueda Libre</p>
+    <p><strong>Correo electrónico:</strong> <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
+</footer>
+
+Hallazgo: Las 3 páginas tenían lang="en", aun cuando todo el contenido está escrito en español.
+
+Corrección: Se actualizó la etiqueta raíz a <html lang="es"> en index.html, tarifas.html y reservas.html
+
+En index.html: Había un <h2> antes del primer <h2> principal sin estructura de secciones clara, y la secuencia saltaba entre párrafos sueltos.
+
+En tarifas.html: El encabezado principal comenzaba en <h2> sin ningún <h1> previo en la página.
+
+En reservas.html: Múltiples etiquetas <h1> estaban anidadas sin jerarquía dentro del formulario y la página
+
+En index.html: Se organizó el contenido en <section> y <article>, manteniendo un solo <h1> ("Rueda Libre") y subtítulos <h2> y <h3> en orden numérico correlativo.
+
+En tarifas.html: Se agregó <h1>Rueda Libre</h1> en el <header> y se definieron los subtítulos como <h2>.
+
+En reservas.html: Se dejó un único <h1>Reserva tu bicicleta</h1> y se reemplazaron las divisiones internas del formulario por <fieldset> con su respectivo <legend> y subtítulos <h2>
+
+En index.html: Las imágenes contenían alts imprecisos o poco descriptivos ("portada", "ruta", "una bicicleta").
+
+En tarifas.html: La imagen con un supuesto logo tenía alt="logo", cuando el archivo era decorativo o requería contexto.
+
+Se sustituyeron los alts de index.html por descripciones contextuales concretas.
+
+En tarifas.html, si la imagen es puramente ilustrativa/decorativa, se estableció alt="" con role="presentation"
+
+Encabezado: Gracias a la propiedad flex-wrap: wrap, al reducir la pantalla los elementos (el título del negocio y los enlaces del menú) que estaban en una sola fila se reorganizan automáticamente: el menú baja de línea de forma fluida cuando ya no hay suficiente espacio horizontal, evitando que el diseño se desborde o se rompa.
+
+Pie de página: Los tres bloques (marca, contacto y horario) distribuidos en fila con flex: 1 y min-width se adaptan dinámicamente. En pantallas grandes se muestran uno al lado del otro, y al estrechar la ventana, bajan de manera escalonada en columnas verticales manteniendo su alineación superior
+
+
+Portada	uso Grid con Dos columnas con proporción definida (1fr 1fr); align-items centra el texto en vertical.
+
+Galería “Nuestras rutas”	Grid	Tres columnas iguales fijas con repeat(3, 1fr), sin importar el contenido.
+
+Reservas	Grid	Proporción 2:1 exacta (2fr 1fr), definida desde el contenedor.
+
+Fila del formulario	Flexbox	Una sola dimensión; flex: 1 1 12rem y wrap la apilan sola en pantallas angostas.
+
+Encabezado	Flexbox	Una fila con título a un lado y menú al otro (space-between). El menú también es una fila flex con gap y wrap.
+
+Pie	Flexbox	Una fila de bloques con space-between y wrap, repartidos según su contenido.
+
+
+Bitácora - Prueba comparativa: CSS Propio vs. Bootstrap 5.3
+
+    Tiempo invertido: 12 minutos.
+
+    Líneas de CSS de distribución:
+
+        Versión propia (Grid + Flexbox): 8 líneas (display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: ...).
+
+        Versión Bootstrap: 0 líneas de CSS escrito, reemplazado por clases de utilidad extensas en el HTML (row g-4, col-12 col-sm-6 col-lg-4 col-xl-3, h-100 d-flex flex-column, etc.).
+
+    ¿Qué te dio Bootstrap sin esfuerzo?
+
+        Una grilla responsiva predefinida lista para usar en segundos mediante puntos de interrupción (sm, lg, xl).
+
+        Sistema de espaciados automáticos (gutters con g-4) y estilos base para tarjetas (card, sombras, bordes redondeados) sin tener que configurar media queries manualmente.
+
+    ¿Qué control perdiste?
+
+        Control semántico del HTML: El código HTML se llena de clases utilitarias largas (class soup), lo que ensucia la legibilidad del marcado.
+
+        Flexibilidad a medida: Ajustar un comportamiento de diseño exacto que no esté contemplado en los tokens predeterminados de Bootstrap requiere sobrescribir variables Sass o escribir CSS adicional de todos modos, perdiendo la ventaja inicial de velocidad.
+
+
+d-flex: Convierte al elemento en un contenedor flexible (Flexbox), permitiendo alinear y distribuir sus elementos internos de forma dinámica.
+
+flex-column flex-md-row: Cambia la orientación del contenedor flexible. Se comporta en columna en celulares (flex-column) y cambia automáticamente a fila a partir de pantallas medianas (flex-md-row).
+
+d-none d-md-block: Gestiona la visibilidad responsiva. Oculta el elemento por defecto en celulares (d-none) y lo muestra como bloque (d-md-block) solo desde pantallas medianas (md) en adelante.
+
+gap-4: Aplica un espacio de separación uniforme y constante entre todos los elementos hijos directos de un contenedor flexible.
+
+rounded-pill: Modifica el borde del elemento aplicando un radio máximo que le da forma de píldora u ovalo perfecto (muy útil para botones o enlaces destacados).
+
+
+Conflicto de tipografía en encabezados (h1, h2, h3):
+
+    Diagnóstico en DevTools: Bootstrap aplica un font-size y un peso (font-weight) muy específicos basados en ems que sobrescribían las fuentes de marca corporativa heredadas. Los títulos aparecían con tamaños distintos a los planeados.
+
+    Solución: Se aplicaron explícitamente clases de utilidad de tipografía de Bootstrap (fw-bold, fs-2, etc.) combinadas con las variables globales para mantener la identidad visual del cliente.
+
+Conflicto de márgenes y reseteos globales (* { box-sizing: border-box; }):
+
+    Diagnóstico en DevTools: Los márgenes predeterminados de las etiquetas <p> y <ul> en Bootstrap chocaban con los espacios personalizados (margin-bottom de 1.5rem) definidos en el CSS propio, generando saltos visuales extraños entre secciones.
+
+    Solución: Se eliminaron los márgenes manuales redundantes en styles.css y se adoptaron las clases utilitarias de espaciado de Bootstrap (mb-3, my-5, g-4) para un control predecible.
+
+Conflicto de colores y subrayado en enlaces de navegación (<a>):
+
+    Diagnóstico en DevTools: Bootstrap aplica estilos de color azul brillante y subrayado por defecto a los enlaces de texto que chocaban con el menú oscuro del encabezado (--azul-noche).
+
+    Solución: Se forzó el uso de clases utilitarias de color en el HTML (text-decoration-none text-white) y se aseguró que el selector de Bootstrap no heredara comportamientos no deseados sobre los botones de reserva.
+
+Migración exitosa de la estructura de 3 páginas (index.html, tarifas.html, reservas.html) a Bootstrap 5.3.
+
+    Personalización de marca en css/style.css mediante la sobrescritura directa de :root (--bs-primary, --bs-primary-rgb, --bs-body-font-family, --bs-link-color y --bs-border-radius).
+
+    Implementación de la variante de botón .btn-naranja (Naranja Pedal) garantizando una relación de contraste superior a 4.5:1.
+
+    Integración de Bootstrap Icons por CDN con atributos aria-hidden="true" en elementos decorativos y aria-label en controles de un solo ícono (como el botón flotante de WhatsApp).
+
+    Implementación del carrusel de promociones en portada y modal interactivo de políticas en el formulario de reservas con validación visual.
+
+Registro visual (Antes y Después de Personalizar):
+
+    Imagen 1: img/capturas/antes_personalizacion.png (Versión beta estándar con azul predeterminado de Bootstrap).
+
+    Imagen 2: img/capturas/despues_personalizacion.png (Versión 2.0 final con paleta Verde Ruta / Naranja Pedal, carrusel e íconos corporativos).

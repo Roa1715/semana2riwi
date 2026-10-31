@@ -1,0 +1,128 @@
+:root {
+
+    --bs-primary: #1E7A4F;
+    --bs-primary-rgb: 30, 122, 79;
+    --bs-body-font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
+    --bs-link-color: #1E7A4F;
+    --bs-border-radius: 0.5rem;
+
+
+    --verde-ruta: #1E7A4F;
+    --verde-hover: #165B3B;
+    --verde-active: #10422B;
+    --naranja-pedal: #F39A2B;
+    --naranja-hover: #D9821A;
+    --naranja-active: #B56B12;
+    --azul-noche: #14213D;
+    --crema-fondo: #FAF6EF;
+    --gris-asfalto: #5B6470;
+
+    --fuente-titulos: 'Montserrat', sans-serif;
+}
+
+
+body {
+    background-color: var(--crema-fondo);
+    color: var(--azul-noche);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--fuente-titulos);
+}
+
+
+.btn-primary {
+    --bs-btn-bg: var(--verde-ruta);
+    --bs-btn-border-color: var(--verde-ruta);
+    --bs-btn-hover-bg: var(--verde-hover);
+    --bs-btn-hover-border-color: var(--verde-hover);
+    --bs-btn-active-bg: var(--verde-active);
+    --bs-btn-active-border-color: var(--verde-active);
+    --bs-btn-focus-shadow-rgb: 30, 122, 79;
+    color: #ffffff;
+}
+
+.btn-naranja {
+    --bs-btn-color: #14213D;
+    --bs-btn-bg: var(--naranja-pedal);
+    --bs-btn-border-color: var(--naranja-pedal);
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: var(--naranja-hover);
+    --bs-btn-hover-border-color: var(--naranja-hover);
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: var(--naranja-active);
+    --bs-btn-active-border-color: var(--naranja-active);
+    --bs-btn-focus-shadow-rgb: 243, 154, 43;
+    font-weight: 700;
+}
+
+
+.marca-titulo {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.portada-destacada {
+    background: linear-gradient(135deg, #1E7A4F 0%, #14213D 100%);
+    color: #ffffff;
+    border-radius: var(--bs-border-radius);
+}
+
+.titulo-seccion {
+    color: var(--azul-noche);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.titulo-seccion::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: var(--naranja-pedal);
+    margin-top: 0.5rem;
+    border-radius: 2px;
+}
+
+.pie-rueda-libre {
+    background-color: var(--azul-noche);
+    border-top: 4px solid var(--naranja-pedal);
+}
+
+
+.btn-whatsapp-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #25D366;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    text-decoration: none;
+}
+
+.btn-whatsapp-flotante:hover,
+.btn-whatsapp-flotante:focus {
+    background-color: #1EBE5D;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+:focus-visible {
+    outline: 3px solid var(--naranja-pedal) !important;
+    outline-offset: 2px !important;
+}
