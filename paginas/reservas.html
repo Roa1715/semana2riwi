@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva tu bicicleta | Rueda Libre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-light text-dark">
+    <header class="encabezado bg-primary text-white py-4 px-3 shadow-sm">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+            <h1 id="reserva" class="h3 fw-bold m-0 text-white">Reserva tu bicicleta</h1>
+            <nav>
+                <ul id="menu" class="nav flex-wrap justify-content-center gap-2 m-0 p-0">
+                    <li class="nav-item"><a href="../index.html#" class="nav-link text-white">Inicio</a></li>
+                    <li class="nav-item"><a href="tarifas.html#info" class="nav-link text-white">Tarifas y rutas</a>
+                    </li>
+                    <li class="nav-item"><a href="reservas.html#reserva"
+                            class="nav-link text-white fw-bold active">Reservas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container my-5">
+
+        <div class="row g-4">
+
+            <div class="col-12 col-md-8">
+                <section class="bg-white p-4 rounded-3 border shadow-sm">
+                    <h2 class="h4 fw-bold mb-4 text-primary">Formulario de reserva</h2>
+
+                    <form action="" method="post">
+
+
+                        <fieldset class="border rounded-3 p-3 mb-4">
+                            <legend class="float-none w-auto px-2 fs-6 fw-bold text-primary m-0">Tus datos</legend>
+
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <label for="nombre" class="form-label fw-semibold small">Nombre</label>
+                                    <input type="text" class="form-control" name="nombre_completo" id="nombre"
+                                        placeholder="Juan David" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="documento" class="form-label fw-semibold small">Documento de
+                                        identidad</label>
+                                    <input type="text" class="form-control" name="documento_identidad" id="documento"
+                                        placeholder="1040573272" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="correo" class="form-label fw-semibold small">Correo electrónico</label>
+                                    <input type="email" class="form-control" name="correo_electronico" id="correo"
+                                        placeholder="alejo@gmail.com" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="celular" class="form-label fw-semibold small">Celular</label>
+                                    <input type="tel" class="form-control" name="numero_celular" id="celular"
+                                        placeholder="3042785947" required>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="border rounded-3 p-3 mb-4">
+                            <legend class="float-none w-auto px-2 fs-6 fw-bold text-primary m-0">Tu alquiler</legend>
+
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <label for="tipo_bicicleta" class="form-label fw-semibold small">Tipo de
+                                        bicicleta</label>
+                                    <select class="form-select" name="tipo_bicicleta" id="tipo_bicicleta" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="urbana">Urbana</option>
+                                        <option value="montaña">Montaña</option>
+                                        <option value="electrica">Eléctrica</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="plan" class="form-label fw-semibold small">Plan de alquiler</label>
+                                    <select class="form-select" name="plan" id="plan" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="rios_y_parques">Ríos y Parques</option>
+                                        <option value="sabores_de_barrio">Sabores de Barrio</option>
+                                        <option value="recto_las_palmas">Recto las Palmas</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="cantidad_de_bici" class="form-label fw-semibold small">Cantidad de
+                                        bicicletas</label>
+                                    <input type="number" class="form-control" name="cantidad_de_bici"
+                                        id="cantidad_de_bici" min="1" max="6" value="1" required>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="border rounded-3 p-3 mb-4">
+                            <legend class="float-none w-auto px-2 fs-6 fw-bold text-primary m-0">Confirmación</legend>
+
+                            <div class="row g-3 mb-3">
+                                <div class="col-12 col-sm-6">
+                                    <label for="fecha_de_alquiler" class="form-label fw-semibold small">Fecha de
+                                        alquiler</label>
+                                    <input type="date" class="form-control" name="fecha_de_alquiler"
+                                        id="fecha_de_alquiler" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="hora_de_entrega" class="form-label fw-semibold small">Hora de
+                                        entrega</label>
+                                    <input type="time" class="form-control" name="hora_de_entrega" id="hora_de_entrega"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="politicas" name="politicas"
+                                    required>
+                                <label class="form-check-label small" for="politicas">
+                                    Acepto las <a href="politicas.html" target="_blank"
+                                        class="text-primary fw-semibold">Políticas de alquiler</a>
+                                    <strong class="text-danger">(Obligatorio)</strong>
+                                </label>
+                            </div>
+
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg fw-bold w-100">Enviar información de
+                                    reserva</button>
+                            </div>
+                        </fieldset>
+
+                    </form>
+                </section>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <aside class="bg-white p-4 rounded-3 border shadow-sm mb-4">
+                    <h2 class="h4 fw-bold mb-3 text-dark">Horario de atención</h2>
+                    <p class="small text-secondary mb-2"><strong>Lunes a viernes:</strong> 7:00 a. m. a 7:00 p. m.</p>
+                    <p class="small text-secondary mb-3"><strong>Sábados, domingos y festivos:</strong> 6:00 a. m. a
+                        2:00 p. m.</p>
+                    <a href="mailto:reserva@gmail.com"
+                        class="btn btn-outline-primary btn-sm w-100 fw-semibold">Contactar soporte por correo</a>
+                </aside>
+
+                <section class="bg-primary bg-opacity-10 p-4 rounded-3 border border-primary border-opacity-25">
+                    <p class="m-0 text-primary fw-semibold small text-center">Somos una empresa muy confiable y puntual
+                        a la hora de los encargos.</p>
+                </section>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-4 border-top border-warning border-4 mt-5">
+        <div class="container">
+            <div class="row g-4 text-center text-md-start">
+                <div class="col-12 col-md-4">
+                    <h4 class="h5 fw-bold text-warning mb-3">🏴‍☠️ Rueda Libre Navío</h4>
+                    <p class="small text-white-50">
+                        Inspirados en la libertad del mar de <strong>One Piece</strong> (obra original de Eiichiro Oda).
+                        Navegamos las calles promoviendo el transporte libre, ecológico y aventurero para todos los
+                        nakamas.
+                    </p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4 class="h5 fw-bold text-warning mb-3">🧭 Rutas del Log Pose</h4>
+                    <ul class="list-unstyled small text-white-50">
+                        <li class="mb-2">📍 Sede East Blue (Centro)</li>
+                        <li class="mb-2">📍 Sede Water 7 (Ciclorruta Norte)</li>
+                        <li class="mb-2">📍 Sede Sabaody (Parque Sur)</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4 class="h5 fw-bold text-warning mb-3">🍖 Código Pirata</h4>
+                    <p class="small text-white-50 mb-1"><strong>Correo:</strong> <a
+                            href="mailto:hola@ruedalibre.example"
+                            class="text-white text-decoration-underline">hola@ruedalibre.example</a></p>
+                    <p class="small text-white-50 mb-1">Horario: De Sol a Sol (6:00 AM - 8:00 PM)</p>
+                    <p class="small text-warning fst-italic">"¡El rey de las bicicletas serás tú!"</p>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="text-center small text-white-50">
+                <p class="m-0">© 2026 Rueda Libre x One Piece Fan Project. Personajes y referencias propiedad de
+                    Eiichiro Oda / Shueisha / Toei Animation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s98+8i5AB4v1z1C5v5f5+5+5..." crossorigin="anonymous"></script>
+</body>
+
+</html>
