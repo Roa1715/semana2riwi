@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rueda Nocturna | Rueda Libre</title>
+    <!-- CSS compilado con la CLI de Tailwind -->
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen py-10 px-4">
+
+    <main class="max-w-xl mx-auto space-y-8">
+        
+        <!-- SECCIÓN PRINCIPAL HERO -->
+        <section class="bg-slate-800 p-6 rounded-2xl shadow-xl border border-slate-700">
+            <span class="inline-block bg-emerald-500/20 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                Nuevo · Jueves a sábado
+            </span>
+
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-2">
+                Rueda Nocturna
+            </h1>
+            <p class="text-slate-300 text-base md:text-lg mb-6">
+                Descubre Medellín en bici cuando se encienden las luces.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 mb-6 py-4 border-y border-slate-700 text-center">
+                <div>
+                    <span class="block text-2xl font-bold text-emerald-400">3 rutas</span>
+                    <span class="text-xs text-slate-400 uppercase tracking-wider">Disponibles</span>
+                </div>
+                <div>
+                    <span class="block text-2xl font-bold text-emerald-400">Desde $55.000</span>
+                    <span class="text-xs text-slate-400 uppercase tracking-wider">Tarifa base</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-3">
+                <a href="#rutas" class="text-center bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 px-6 rounded-xl transition duration-200 shadow-md focus:outline-none focus:ring-4 focus:ring-emerald-400/50">
+                    Inscríbete (Principal)
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN RUTAS -->
+        <section id="rutas" class="space-y-6">
+            <h2 class="text-2xl font-bold text-white tracking-tight">Rutas de la Campaña</h2>
+
+            <!-- CARD 1: Luces del Centro -->
+            <article class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 shadow-lg hover:border-emerald-500 hover:shadow-2xl transition-all duration-300">
+                <!-- Imagen con alto uniforme y ancho completo -->
+                <img src="../img/rios_y_parques.jpeg" alt="Ruta Luces del Centro" class="w-full h-48 object-cover">
+                
+                <div class="p-6">
+                    <!-- Etiqueta de nivel (Fácil - Verde) -->
+                    <span class="inline-block bg-emerald-500/20 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                        Nivel: Fácil
+                    </span>
+
+                    <h3 class="text-xl font-bold text-white mb-4">Luces del Centro</h3>
+
+                    <!-- Lista de datos jerarquizada -->
+                    <dl class="grid grid-cols-3 gap-2 py-3 border-y border-slate-700/60 mb-4">
+                        <div>
+                            <dt class="text-xs text-slate-400 font-medium">Distancia</dt>
+                            <dd class="text-sm font-semibold text-slate-200">10 km</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs text-slate-400 font-medium">Duración</dt>
+                            <dd class="text-sm font-semibold text-slate-200">2 h</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs text-slate-400 font-medium">Encuentro</dt>
+                            <dd class="text-sm font-semibold text-slate-200">Sede Rueda Libre</dd>
+                        </div>
+                    </dl>
+
+                    <!-- Precio destacado y Botón principal -->
+                    <div class="flex items-center justify-between mt-4">
+                        <div>
+                            <span class="text-xs text-slate-400 block">Precio por persona</span>
+                            <span class="text-2xl font-extrabold text-emerald-400">$55.000</span>
+                        </div>
+                        <a href="#" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-2.5 px-5 rounded-xl transition duration-200 shadow-md focus:outline-none focus:ring-4 focus:ring-emerald-400/50 text-sm">
+                            Inscríbete
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CARD 2: Miradores de la Ciudad -->
+            <article class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 shadow-lg hover:border-amber-500 hover:shadow-2xl transition-all duration-300">
+                <img src="../img/sabores-de-barrio.jpeg" alt="Ruta Miradores de la Ciudad" class="w-full h-48 object-cover">
+                
+                <div class="p-6">
+                    <!-- Etiqueta de nivel (Medio - Amarillo/Ámbar) -->
+                    <span class="inline-block bg-amber-500/20 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                        Nivel: Medio
+                    </span>
+
+                    <h3 class="text-xl font-bold text-white mb-4">Miradores de la Ciudad</h3>
+
+                    <dl class="grid grid-cols-3 gap-2 py-3 border-y border-slate-700/60 mb-4">
+                        <div>
+                            <dt class="text-xs text-slate-400 font-medium">Distancia</dt>
+                            <dd class="text-sm font-semibold text-slate-200">16 km</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs text-slate-400 font-medium">Duración</dt>
+                            <dd class="text-sm font-semibold text-slate-200">3 h</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs text-slate-400 font-medium">Encuentro</dt>
+                            <dd class="text-sm font-semibold text-slate-200">Sede Rueda Libre</dd>
+                        </div>
+                    </dl>
+
+                    <div class="flex items-center justify-between mt-4">
+                        <div>
+                            <span class="text-xs text-slate-400 block">Precio por persona</span>
+                            <span class="text-2xl font-extrabold text-amber-400">$75.000</span>
+                        </div>
+                        <a href="#" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-2.5 px-5 rounded-xl transition duration-200 shadow-md focus:outline-none focus:ring-4 focus:ring-emerald-400/50 text-sm">
+                            Inscríbete
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CARD 3: Luna en Las Palmas -->
+            <article class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 shadow-lg hover:border-rose-500 hover:shadow-2xl transition-all duration-300">
+                <img src="../img/recto-las-palmas.jpeg" alt="Ruta Luna en Las Palmas" class="w-full h-48 object-cover">
+                
+                <div class="p-6">
+                    <!-- Etiqueta de nivel (Difícil - Rojo/Rosa) -->
+                    <span class="inline-block bg-rose-500/20 text-rose-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                        Nivel: Difícil
+                    </span>
+
+                    <h3 class="text-xl font-bold text-white mb-4">Luna en Las Palmas</h3>
+
+                    <dl class="grid grid-cols-3 gap-2 py-3 border-y border-slate-700/60 mb-4">
+                        <div>
+                            <dt class="text-xs text-slate-400 font-medium">Distancia</dt>
+                            <dd class="text-sm font-semibold text-slate-200">22 km</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs text-slate-400 font-medium">Duración</dt>
+                            <dd class="text-sm font-semibold text-slate-200">3,5 h</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs text-slate-400 font-medium">Encuentro</dt>
+                            <dd class="text-sm font-semibold text-slate-200">Sede Rueda Libre</dd>
+                        </div>
+                    </dl>
+
+                    <div class="flex items-center justify-between mt-4">
+                        <div>
+                            <span class="text-xs text-slate-400 block">Precio por persona</span>
+                            <span class="text-2xl font-extrabold text-rose-400">$95.000</span>
+                        </div>
+                        <a href="#" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-2.5 px-5 rounded-xl transition duration-200 shadow-md focus:outline-none focus:ring-4 focus:ring-emerald-400/50 text-sm">
+                            Inscríbete
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
